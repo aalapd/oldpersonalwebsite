@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+        <script type="text/javascript" src="../../scripts/lightbox.js"></script>
+    </head>
+    <body id="body">
+        <header><%- include('../partials/header'); %></header>
+        <div id="canvas-div"><%- include('../partials/canvas');%></div>
+        <!--Template end-->
+        <div>
+            <h4 class="project-title no-margin"><%= folder.toUpperCase()%></h4>
+        </div>
+        <main id="gallery-container" class="container scrollbar">
+            <% if (folder.includes('>')) { images.forEach(image => { %>
+
+            <video
+                id="<%=image%>"
+                class="gallery-video"
+                onclick="scrollToElement('<%=image%>');"
+                onfocusout="removeFocus('<%=image%>');"
+                autoplay
+                loop
+                muted
+                playsinline
+            >
+                <source
+                    src="../../assets/projects/<%=folder%>/<%=image.split('.').slice(0, -1).join('.')%>.webm"
+                    type="video/webm"
+                />
+                <source
+                    src="../../assets/projects/<%=folder%>/fallback/<%=image.split('.').slice(0, -1).join('.')%>.mp4"
+                    type="video/mp4"
+                />
+            </video>
+
+            <% }); } else { images.forEach(image => { %>
+            <img
+                class="gallery-image"
+                src="../../assets/projects/<%=folder%>/<%=image%>"
+                onclick="displayLightbox('../../assets/projects/<%=folder%>/<%=image%>');"
+                loading="lazy"
+            />
+            <% }); } %>
+        </main>
+        <footer><%- include('../partials/footer'); %></footer>
+    </body>
+</html>

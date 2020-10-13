@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body
+        id="body"
+        class="scrollbar"
+        style="min-height: 680vh; max-height: 700vh"
+    >
+        <header><%- include('../partials/header'); %></header>
+        <div id="canvas-div"><%- include('../partials/canvas');%></div>
+        <!--Template end-->
+        <div class="quickscrollHandle quickscrollHandle-main">
+            <a href="#bio" class="cursor-effect"
+                ><h2 class="text-glow quickscrollHandle-item">▼</h2></a
+            >
+        </div>
+        <main id="bio" class="">
+            <div id="bio-container">
+                <!-- Container WHO -->
+                <div id="who" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h2 class="text-glow observed">Hi.</h2>
+                        <video
+                            class="about-video about-desc-item observed border-rad-round"
+                            loop
+                            muted
+                            autoplay
+                            playsinline
+                        >
+                            <source
+                                src="../../assets/projects/magenta>hotpink/mag-pink12.webm"
+                            />
+                            <source
+                                src="../../assets/projects/magenta>hotpink/fallback/mag-pink12.mp4"
+                            />
+                        </video>
+                        <h3 class="about-desc-item text-glow observed">
+                            I'm Aalap.
+                        </h3>
+                    </div>
+                    <div
+                        class="quickscrollHandle quickscrollHandle-sub grid-item float-right"
+                    >
+                        <a href="#what" class="cursor-effect"
+                            ><h3 class="text-glow quickscrollHandle-item">
+                                ▼
+                            </h3></a
+                        >
+                    </div>
+                </div>
+                <!-- Container WHAT -->
+                <div id="what" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h1 class="about-desc-item text-glow observed">
+                            I'm a visual artist and web developer.
+                        </h1>
+                    </div>
+                    <div
+                        class="quickscrollHandle quickscrollHandle-sub grid-item float-right"
+                    >
+                        <a href="#why" class="cursor-effect"
+                            ><h3 class="text-glow quickscrollHandle-item">
+                                ▼
+                            </h3></a
+                        >
+                    </div>
+                </div>
+                <!-- Container WHY -->
+                <div id="why" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h2 class="text-glow observed">
+                            The Internet is a very big place.
+                        </h2>
+                        <h3 class="text-glow observed">
+                            And it's only getting bigger.
+                        </h3>
+                    </div>
+                    <div class="quickscrollHandle quickscrollHandle-sub">
+                        <a href="#eye" class="cursor-effect"
+                            ><h3 class="text-glow quickscrollHandle-item">
+                                ▼
+                            </h3></a
+                        >
+                    </div>
+                </div>
+                <!-- Container EYE -->
+                <div id="eye" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h1 class="about-desc-item text-glow observed">
+                            Capturing eyeballs is tricky business.
+                        </h1>
+                        <video
+                            class="about-video about-desc-item observed border-rad-round float-left"
+                            loop
+                            muted
+                            autoplay
+                            playsinline
+                        >
+                            <source
+                                src="../../assets/projects/magenta>hotpink/mag-pink13.webm"
+                                type="video/webm"
+                            />
+                            <source
+                                src="../../assets/projects/magenta>hotpink/fallback/mag-pink13.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                    <div class="quickscrollHandle quickscrollHandle-sub">
+                        <a href="#how" class="cursor-effect"
+                            ><h3 class="text-glow quickscrollHandle-item">
+                                ▼
+                            </h3></a
+                        >
+                    </div>
+                </div>
+                <!-- Container HOW -->
+                <div id="how" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h2 class="about-desc-item text-glow observed">
+                            But that's why I'm here.
+                        </h2>
+                        <video
+                            class="about-video about-desc-item observed border-rad-round float-right"
+                            loop
+                            muted
+                            autoplay
+                            playsinline
+                        >
+                            <source
+                                src="../../assets/projects/magenta>hotpink/mag-pink05.webm"
+                                type="video/webm"
+                            />
+                            <source
+                                src="../../assets/projects/magenta>hotpink/fallback/mag-pink05.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                    <div class="quickscrollHandle quickscrollHandle-sub">
+                        <a href="#contact-div" class="cursor-effect"
+                            ><h3 class="text-glow quickscrollHandle-item">
+                                ▼
+                            </h3></a
+                        >
+                    </div>
+                </div>
+                <!-- Container CONTACT-->
+                <div id="contact-div" class="about-desc">
+                    <div class="container-item animation-expand">
+                        <h1 class="about-desc-item text-glow observed">
+                            To design your online identity.
+                        </h1>
+                        <p class="about-desc-item text-glow observed">
+                            (...and make sure your customers keep coming back
+                            for more.)
+                        </p>
+                    </div>
+                    <a href="/contact" class="link quickscrollHandle-sub"
+                        ><h3 class="about-desc-item cursor-effect">
+                            Get in touch
+                        </h3></a
+                    >
+                </div>
+            </div>
+        </main>
+        <footer><%- include('../partials/footer'); %></footer>
+        <script>
+            let elements = document.querySelectorAll(".observed");
+
+            let config = {
+                root: null,
+                threshold: [1],
+            };
+
+            let observer = new IntersectionObserver(onChange, config);
+            elements.forEach((el) => observer.observe(el));
+
+            function onChange(changes, observer) {
+                changes.forEach((change) => {
+                    if (change.isIntersecting === true) {
+                        change.target.style.opacity = 1;
+                    } else change.target.style.opacity = 0;
+                });
+            }
+        </script>
+    </body>
+</html>
