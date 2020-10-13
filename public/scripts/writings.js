@@ -104,14 +104,14 @@ function addPost(item, post) {
         postDiv.append(postContentDiv);
 
         // forward backward buttons
-        let buttonPrev = document.createElement("button");
-        let buttonNext = document.createElement("button");
+        // let buttonPrev = document.createElement("button");
+        // let buttonNext = document.createElement("button");
 
-        buttonPrev.classList = "nav-button";
-        buttonNext.classList = "nav-button";
+        // buttonPrev.classList = "nav-button";
+        // buttonNext.classList = "nav-button";
 
-        buttonPrev.onclick = () => {};
-        buttonNext.onclick = () => {};
+        // buttonPrev.onclick = () => {};
+        // buttonNext.onclick = () => {};
     }
 
     // tags

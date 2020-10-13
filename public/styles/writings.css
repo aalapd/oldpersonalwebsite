@@ -13,6 +13,28 @@ h1:hover {
     font-size: 1.5vh;
 }
 
+blockquote {
+    padding: 3vh;
+    padding-left: 15%;
+    padding-right: 15%;
+    color: magenta;
+    font-family: "Inconsolata", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+strong {
+    font-weight: 900;
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+}
+
 .post-desc,
 .post-content,
 .tags-div,
@@ -20,15 +42,21 @@ h1:hover {
     text-align: left;
 }
 
+.post-desc,
 .post-content > p,
 .post-content > a,
 .post-content > a:hover {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
-    font-size: 1.5em !important;
+    font-size: 3vh !important;
     padding: 1em;
     margin: 0em;
+    text-align: justify;
     vertical-align: middle;
+}
+
+.post-header {
+    margin-top: 1em;
 }
 
 .post-content > figure {
