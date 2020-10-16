@@ -58,14 +58,17 @@ function generateChildren(amount) {
         var rect = new Rectangle([0, 0], [50, 50]);
         rect.center = mousePoint;
 
-        var path = new Path.Rectangle(rect, Math.random() * 10 + 5);
+        var path = new Path.Rectangle(
+            rect,
+            (Math.floor(Math.random() * 10) / Math.random()) * 5
+        );
         path.strokeColor = colors[i % 4];
-        path.strokeWidth = children.length;
+        path.strokeWidth = Math.floor(children.length / 2);
         path.strokeCap = "round";
         path.smooth();
         // path.simplify();
 
-        var scale = ((1 - i / amount) * displayWidth) / 150;
+        var scale = ((1 - i / amount) * displayWidth) / 250;
         path.scale(scale);
     }
 }
@@ -103,12 +106,12 @@ function onFrame(event) {
             return;
         }
 
-        var delta = (mousePoint - item.position) / (i + 10);
+        var delta = (mousePoint - item.position) / (i + 50);
         if (clicked === true) {
-            item.rotate(Math.sin((event.count + i) / 3) * 15);
+            item.rotate(Math.sin((event.count + i) / 3) * 10);
             item.scale(1 + children.length / 5000, mousePoint);
         } else {
-            item.rotate(Math.sin((event.count + i) / 240) * 3);
+            item.rotate(Math.sin((event.count + i) / 240) * 1);
             item.scale(1 - children.length / 50000, mousePoint);
         }
         if (delta.length > 0.1) item.position += delta;

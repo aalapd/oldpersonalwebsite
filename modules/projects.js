@@ -21,18 +21,18 @@ const projectsItems = [
         target: "in",
     },
     {
-        name: "Blarneybot",
-        description:
-            "A very rude generative-text machine built with Node and Tracery. For serious use only.",
-        href: "https://t.me/BlarneyBot",
-        target: "out",
-    },
-    {
         name: "Wabi",
         description:
             "A collection of experiments with electronic beats, atmospheric synths, overdriven arpeggios, and classical Indian vocals.",
         href: "https://davjekar.bandcamp.com",
         target: "out",
+    },
+    {
+        name: "Doombai",
+        description:
+            "Images from the apocalyptic nightmare that is Mumbai. Parental guidance is advised.",
+        href: "projects/doombai",
+        target: "in",
     },
     {
         name: "Placid",
@@ -42,11 +42,11 @@ const projectsItems = [
         target: "out",
     },
     {
-        name: "Doombai",
+        name: "Blarneybot",
         description:
-            "Images from the apocalyptic nightmare that is Mumbai. Parental guidance is advised.",
-        href: "projects/doombai",
-        target: "in",
+            "A very rude generative-text machine built with Node and Tracery. For serious use only.",
+        href: "https://t.me/BlarneyBot",
+        target: "out",
     },
     {
         name: "natural habitats",
