@@ -206,8 +206,8 @@ a.header-anchor:visited {
     font-size: 3vh;
     color: var(--main-link-color);
     padding-top: 1.5em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
 }
 
 a.header-anchor:hover {
