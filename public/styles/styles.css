@@ -227,7 +227,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 3.25vw;
     color: var(--color2);
 }
 
@@ -278,6 +278,8 @@ p {
     transform: rotate(-90deg) translateX(100%);
     transform-origin: 100% 100%;
     z-index: 997;
+    color: var(--color5);
+    font-size: 7vh;
 }
 
 #projects-container,
@@ -400,7 +402,7 @@ p {
     width: 25%;
 }
 
-#contact-div {
+#contact {
     position: relative;
     text-align: center;
     font-style: italic;

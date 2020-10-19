@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF>
+    <rdf:Description>
+        <dc:title>Aalap Davjekar</dc:title>
+        <dc:creator>Aalap Davjekar</dc:creator>
+        <dc:subject>Aalap Davjekar's website</dc:subject>
+        <dc:description
+            >Aalap Davjekar is an artist, writer, and developer based in India.
+            Looking to collaborate? Get in touch.</dc:description
+        >
+        <dc:publisher>Aalap Davjekar</dc:publisher>
+        <dc:contributor>Aalap Davjekar</dc:contributor>
+        <dc:date>2020-10-19</dc:date>
+        <dc:type>Text</dc:type>
+        <dc:format>HTML</dc:format>
+        <dc:source>Aalap Davjekar</dc:source>
+        <dc:language>en</dc:language>
+        <dc:rights>Copyright Aalap Davjekar 2020</dc:rights>
+    </rdf:Description>
+</rdf:RDF>

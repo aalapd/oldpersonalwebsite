@@ -21,6 +21,13 @@ const projectsItems = [
         target: "in",
     },
     {
+        name: "Blarneybot",
+        description:
+            "A very rude generative-text machine built with Node and Tracery. For serious use only.",
+        href: "https://t.me/BlarneyBot",
+        target: "out",
+    },
+    {
         name: "Wabi",
         description:
             "A collection of experiments with electronic beats, atmospheric synths, overdriven arpeggios, and classical Indian vocals.",
@@ -39,13 +46,6 @@ const projectsItems = [
         description:
             "A timelapse of the clouds shot over the course of an Indian monsoon.",
         href: "https://vimeo.com/89130732",
-        target: "out",
-    },
-    {
-        name: "Blarneybot",
-        description:
-            "A very rude generative-text machine built with Node and Tracery. For serious use only.",
-        href: "https://t.me/BlarneyBot",
         target: "out",
     },
     {
