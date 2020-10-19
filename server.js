@@ -33,6 +33,16 @@ app.get("/contact", function (req, res) {
     res.render("pages/contact");
 });
 
+app.get("/robots.txt", function (req, res) {
+    res.sendFile("robots.txt");
+});
+app.get("/sitemap.xml", function (req, res) {
+    res.sendFile("sitemap.xml");
+});
+app.get("/dublin.rdf", function (req, res) {
+    res.sendFile("dublin.rdf");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
