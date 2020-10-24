@@ -1,3 +1,5 @@
+console.log = function () {};
+
 // var allPosts;
 var container = document.getElementById("post-container");
 

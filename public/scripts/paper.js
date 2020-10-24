@@ -1,5 +1,7 @@
+// For debugging
+
 var statsDisplay = false;
-// console.log = function () {};
+console.log = function () {};
 var t0, fps;
 
 // Main
@@ -16,7 +18,6 @@ var colorPalette = [
 var color1, color2, color3, color4;
 var colors = [];
 
-// var canvas = document.getElementById("myCanvas");
 var children = project.activeLayer.children;
 var visibleChildren = 0;
 var childrenLimit = 500;
@@ -27,8 +28,6 @@ var startTime;
 var displayWidth = window.screen.width;
 var displayHeight = window.screen.height;
 
-// alert(displayHeight);
-// alert(displayWidth);
 console.log("Screen width: " + displayWidth);
 console.log("Screen height: " + displayHeight);
 

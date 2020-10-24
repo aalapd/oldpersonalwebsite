@@ -10,10 +10,6 @@ window.onload = () => {
     function moveCursor(e) {
         mouseCursor.style.top = e.pageY + "px";
         mouseCursor.style.left = e.pageX + "px";
-        // mouseCursor.style.transitionDuration = "0";
-        // let compStyles = window.getComputedStyle(mouseCursor);
-        // console.log(compStyles.x, compStyles.y);
-        // console.log(e);
     }
 
     window.addEventListener("click", randomizeColor);
@@ -40,4 +36,14 @@ window.onload = () => {
 
     var canvas = document.getElementById("myCanvas");
     canvas.addEventListener("contextmenu", (event) => event.preventDefault());
+
+    console.info(`
+    ██╗  ██╗███████╗███████╗██████╗     ██╗      ██████╗  ██████╗ ██╗  ██╗██╗███╗   ██╗ ██████╗ ██╗
+    ██║ ██╔╝██╔════╝██╔════╝██╔══██╗    ██║     ██╔═══██╗██╔═══██╗██║ ██╔╝██║████╗  ██║██╔════╝ ██║
+    █████╔╝ █████╗  █████╗  ██████╔╝    ██║     ██║   ██║██║   ██║█████╔╝ ██║██╔██╗ ██║██║  ███╗██║
+    ██╔═██╗ ██╔══╝  ██╔══╝  ██╔═══╝     ██║     ██║   ██║██║   ██║██╔═██╗ ██║██║╚██╗██║██║   ██║╚═╝
+    ██║  ██╗███████╗███████╗██║         ███████╗╚██████╔╝╚██████╔╝██║  ██╗██║██║ ╚████║╚██████╔╝██╗
+    ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝         ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+                                                                                                   
+    `);
 };

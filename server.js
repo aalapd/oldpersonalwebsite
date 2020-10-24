@@ -32,6 +32,11 @@ app.get(["/writings", "/writings/:post"], function (req, res) {
 app.get("/contact", function (req, res) {
     res.render("pages/contact");
 });
+// 404 page redirecting to homepage
+app.use(function (req, res, next) {
+    res.status(404);
+    res.render("pages/index");
+});
 
 app.get("/robots.txt", function (req, res) {
     res.sendFile("robots.txt");
