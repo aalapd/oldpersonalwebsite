@@ -72,6 +72,7 @@ function addPost(item, post) {
     let postHeaderAnchor = document.createElement("a");
     postHeaderAnchor.classList = "link";
     postHeaderAnchor.href = "writings/" + item._id;
+    postHeaderAnchor.target = '_self';
     postDiv.append(postHeaderAnchor);
 
     // a neat post heading

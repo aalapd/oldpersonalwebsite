@@ -8,7 +8,7 @@ module.exports.getImageFiles = function (folder) {
     );
 
     const dirents = fs.readdirSync(directoryPath, { withFileTypes: true });
-    var imgArray = [];
+    var imgArray = []; // not required
 
     var images = dirents
         .filter((dirent) => dirent.isFile())
@@ -17,5 +17,5 @@ module.exports.getImageFiles = function (folder) {
     for (let i in images) {
         imgArray.push(images[i]);
     }
-    return imgArray;
+    return imgArray; // not required. simply return images
 };

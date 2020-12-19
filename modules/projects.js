@@ -7,6 +7,13 @@
 
 const projectsItems = [
     {
+        name: "Need Music",
+        description:
+            "Need Music is a discovery service that promotes a variety of music curated by musicians, producers, song writers, and music journalists.",
+        href: "https://www.needmusic.app",
+        target: "out",
+    },
+    {
         name: "magenta>hotpink",
         description:
             "I have raised my cats in a simulated utopian communist household. Race and gender are meaningless.",
