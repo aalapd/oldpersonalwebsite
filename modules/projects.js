@@ -61,6 +61,13 @@ const projectsItems = [
         href: "projects/natural_habitats",
         target: "in",
     },
+    {
+        name: "That time in the Himalayas",
+        description:
+            "Bicycled 3000 km through the Himalayas. Took some photographs.",
+        href: "projects/the-himalayas",
+        target: "in",
+    },
 ];
 
 module.exports = projectsItems;
