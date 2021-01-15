@@ -4,8 +4,8 @@ window.onload = () => {
     mouseCursor.style.left = "50%";
     mouseCursor.style.display = "unset";
 
-    window.addEventListener("mousemove", moveCursor);
-    window.addEventListener("scroll", moveCursor, false);
+    window.addEventListener("mousemove", moveCursor, { passive: true });
+    window.addEventListener("scroll", moveCursor, false, { passive: true });
 
     function moveCursor(e) {
         mouseCursor.style.top = e.pageY + "px";
