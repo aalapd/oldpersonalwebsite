@@ -6,13 +6,13 @@
 // The target specifies whether the href key points to a local or outside page (this is redundant as the href value should simply be checked for an 'https')
 
 const projectsItems = [
-    {
-        name: "Need Music",
-        description:
-            "Need Music is a discovery service that promotes a variety of music curated by musicians, producers, song writers, and music journalists.",
-        href: "https://www.needmusic.app",
-        target: "out",
-    },
+    // {
+    //     name: "Need Music",
+    //     description:
+    //         "Need Music is a discovery service that promotes a variety of music curated by musicians, producers, song writers, and music journalists.",
+    //     href: "https://www.needmusic.app",
+    //     target: "out",
+    // },
     {
         name: "magenta>hotpink",
         description:

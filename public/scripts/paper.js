@@ -51,6 +51,7 @@ function randomizeColors() {
 
 function generateChildren(amount) {
     amount = Math.min(amount, 50) / 2;
+    // amount = 200;
     console.log("amount:" + amount);
 
     for (var i = 0; i < amount; i++) {
