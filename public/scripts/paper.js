@@ -32,7 +32,7 @@ console.log("Screen width: " + displayWidth);
 console.log("Screen height: " + displayHeight);
 
 randomizeColors();
-generateChildren(30);
+generateChildren(15);
 
 function randomizeColors() {
     color1 = colorPalette[Math.floor(Math.random() * colorPalette.length)];
@@ -50,7 +50,7 @@ function randomizeColors() {
 }
 
 function generateChildren(amount) {
-    amount = Math.min(amount, 50) / 2;
+    amount = Math.min(amount, 15) / 2;
     // amount = 200;
     console.log("amount:" + amount);
 
@@ -63,12 +63,12 @@ function generateChildren(amount) {
             (Math.floor(Math.random() * 10) / Math.random()) * 5
         );
         path.strokeColor = colors[i % 4];
-        path.strokeWidth = Math.floor(children.length / 2);
+        path.strokeWidth = Math.floor(children.length);
         path.strokeCap = "round";
         path.smooth();
         // path.simplify();
 
-        var scale = ((1 - i / amount) * displayWidth) / 250;
+        var scale = ((1 - i / amount) * displayWidth) / 220;
         path.scale(scale);
     }
 }
@@ -108,8 +108,8 @@ function onFrame(event) {
 
         var delta = (mousePoint - item.position) / (i + 50);
         if (clicked === true) {
-            item.rotate(Math.sin((event.count + i) / 3) * 10);
-            item.scale(1 + children.length / 5000, mousePoint);
+            item.rotate(Math.sin((event.count + i) / 3) * 5);
+            item.scale(1 + children.length / 25000, mousePoint);
         } else {
             item.rotate(Math.sin((event.count + i) / 240) * 1);
             item.scale(1 - children.length / 50000, mousePoint);
@@ -120,7 +120,7 @@ function onFrame(event) {
             // remove item if smaller than 5px or larger than display width * 2
             item.remove();
         }
-        while (children.indexOf(item) > 50) {
+        while (children.indexOf(item) > 15) {
             children[0].remove();
         }
     }

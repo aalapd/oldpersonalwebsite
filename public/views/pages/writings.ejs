@@ -6,11 +6,11 @@
         <title>Writings by Aalap Davjekar</title>
         <meta
             name="description"
-            content="The writings of Aalap Davjekar on technology, veganism, Buddhism, meditation, philosophy, and spirituality."
+            content="The writings of Aalap Davjekar on technology, veganism, meditation, philosophy, and spirituality."
         />
         <meta
             name="keywords"
-            content="technology, veganism, Buddhism, meditation, philosophy, spirituality, blockchain, bitcoin, economy"
+            content="technology, veganism, meditation, philosophy, spirituality, blockchain, bitcoin, economy"
         />
         <script
             type="text/javascript"
@@ -26,19 +26,6 @@
         <div>
             <h1 class="project-title no-margin">Writings</h1>
         </div>
-        <!-- Spinner -->
-        <div id="loader-container">
-            <div id="loading" class="lds-roller">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
         <main id="writings-container" class="container scrollbar">
             <div id="post-container">
                 <!--Posts generated from script-->
@@ -46,10 +33,30 @@
         </main>
         <footer><%- include('../partials/footer'); %></footer>
         <script type="text/javascript" src="../../scripts/writings.js"></script>
+
         <script>
-            var post = "<%= post %>";
-            console.log("POST: " + post);
-            getContent(post);
+            
+            var post = '<%-post%>';
+            
+            "<% if (post != undefined) { %>" 
+                    var id = '<%=post.id%>';
+                    var title = '<%=post.title%>';
+                    var body = '<%-post.body%>';
+                    var date = '<%=post.date%>';
+                    var tags = '<%=post.tags%>';
+                    addPost(id, title, body, date, tags, true);
+                    console.log('Displaying single post.');
+            "<% } else { %>";
+                console.log('Displaying all posts.');       
+                "<% for (i in postArr) { %>";
+                        var id = '<%=postArr[i].id%>';
+                        var title = '<%=postArr[i].title%>';
+                        var body = '<%-postArr[i].body%>';
+                        var date = '<%=postArr[i].date%>';
+                        var tags = '<%=postArr[i].tags%>';
+                        addPost(id, title, body, date, tags, false);
+                "<% } %>";
+            "<% }%>";
         </script>
     </body>
 </html>

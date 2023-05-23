@@ -121,11 +121,12 @@ p {
 .project-title {
     position: absolute;
     bottom: 0;
+    right: 0;
     transform: rotate(-90deg) translateX(100%);
     transform-origin: 100% 100%;
     z-index: 997;
     color: var(--color5);
-    font-size: 7vh;
+    font-size: 5vh;
 }
 
 #projects-container,
@@ -434,10 +435,10 @@ footer {
 }
 
 .animation-expand:hover {
-    -webkit-transform: Scale(1.1);
-    -moz-transform: Scale(1.1);
-    -o-transform: Scale(1.1);
-    transform: Scale(1.1);
+    -webkit-transform: Scale(1.05);
+    -moz-transform: Scale(1.05);
+    -o-transform: Scale(1.05);
+    transform: Scale(1.05);
 }
 
 .border-rad-round {
